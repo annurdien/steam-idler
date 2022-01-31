@@ -4,5 +4,13 @@
     "gamestoplay": [548430],
     "sendautomessage": true,
     "automessage": "[Auto Message] : I'am currently AFK",
-    "silent": false
+    "silent": false,
+    "rich": {
+        "steam_display": "#statuswithmission",
+        "steam_player_group_type": "4 / 4 Players",
+        "haz": "Hazard 5",
+        "mission": "Ellimination",
+        "gamestatus": "Sandblasted Corridors",
+        "class": "Gunner"
+    }
 }
