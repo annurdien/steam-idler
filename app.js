@@ -69,18 +69,18 @@ function log(message) {
   }
   console.log(
     time[0] +
-      "-" +
-      time[1] +
-      "-" +
-      time[2] +
-      " " +
-      time[3] +
-      ":" +
-      time[4] +
-      ":" +
-      time[5] +
-      " - " +
-      message
+    "-" +
+    time[1] +
+    "-" +
+    time[2] +
+    " " +
+    time[3] +
+    ":" +
+    time[4] +
+    ":" +
+    time[5] +
+    " - " +
+    message
   );
 }
 
@@ -117,17 +117,21 @@ client.on("loggedOn", function (details, parental) {
 
     log(
       "Idling: " +
-        games.length +
-        " games, getting " +
-        games.length * 24 +
-        " hours per day | " +
-        games.length * 336 +
-        " hours per 2 weeks"
+      games.length +
+      " games, getting " +
+      games.length * 24 +
+      " hours per day | " +
+      games.length * 336 +
+      " hours per 2 weeks"
     );
 
     log(games);
     client.gamesPlayed([548430]);
     client.uploadRichPresence(548430, config.rich);
+
+    client.requestRichPresence(548430, [client.steamID], (err, res) => {
+      log(JSON.stringify(res, null, 2));
+    });
 
     if (!config.silent) {
       client.setPersona(1);
@@ -150,11 +154,11 @@ client.on("friendMessage", function (steamid, message) {
       if (err) log("Error: " + err);
       log(
         "Message from " +
-          steamids[steamid].player_name +
-          " ID:[" +
-          steamid.getSteamID64() +
-          "]: " +
-          message
+        steamids[steamid].player_name +
+        " ID:[" +
+        steamid.getSteamID64() +
+        "]: " +
+        message
       );
       client.chatMessage(steamid, config.automessage);
       responded.push(steamid.getSteamID64());

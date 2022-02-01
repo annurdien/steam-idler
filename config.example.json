@@ -6,11 +6,15 @@
     "automessage": "[Auto Message] : I'am currently AFK",
     "silent": false,
     "rich": {
-        "steam_display": "#statuswithmission",
-        "steam_player_group_type": "4 / 4 Players",
-        "haz": "Hazard 5",
-        "mission": "Ellimination",
-        "gamestatus": "Sandblasted Corridors",
-        "class": "Gunner"
+        "class": "GUNNER",
+        "gamestatus": "0",
+        "steam_player_group_type": "Multi",
+        "haz": "DD Haz 4.5",
+        "mission": "3",
+        "steam_display": "#StatusWithMission",
+        "modtype": "None",
+        "steam_player_group_size": "4",
+        "steam_player_max_group_size": "4",
+        "steam_player_group": "109775240973926473"
     }
 }
